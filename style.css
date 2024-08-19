@@ -242,7 +242,7 @@
         margin: auto;
 /*        min-height: calc(450vh - 324px);*/
         width: 100%;
-        height: 370vh;
+        height: 335vh;
       }
 
       .listmenu{
@@ -254,7 +254,7 @@
         position: absolute;
         visibility: hidden;
         display: block;
-        height: 370vh;
+        height: 335.5vh;
         margin-top: -21%; 
         background-color: white;
        transform: translateX(195%); 
@@ -421,7 +421,7 @@
           right: 0;
           width: 50%;
           margin-left: 50%;
-          height: 370vh;
+          height: 335vh;
           background-color: black;
           opacity: 75%;
           visibility : visible;
