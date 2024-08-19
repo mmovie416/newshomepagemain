@@ -1,0 +1,616 @@
+.attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap');
+
+    *{
+      margin:0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body{
+      background-color: hsl(233, 8%, 79%);
+      display: flex;
+      flex-direction: column;
+      font-family: "Inter",sans-serif;
+      overflow-x: hidden;  
+     min-height: 100vh;   
+
+
+    }
+
+    .container{
+      background-color: hsl(36, 100%, 99%);
+      margin: auto;
+      width: 100%;
+     
+    }
+    
+    .menu{
+      position: relative;
+      display: grid;
+      grid-template-areas: 'logo menulist';
+      padding: 7%;
+    }
+
+
+   .menu .iconmenu{
+        visibility: hidden;
+    }
+
+    .closebtn{
+      visibility: hidden;
+    }
+
+    .logo{grid-area: logo;}
+
+    .listmenu{
+      grid-area: menulist;
+    }
+
+    .listmenu ul{
+      display: flex;
+      justify-content: space-evenly;
+      width: 55%;
+      margin-left:25%;
+    }
+
+    .listmenu ul li{ 
+      list-style:none;
+      margin-left: 15%; 
+    }
+
+    .listmenu ul li:hover{
+      cursor: pointer;
+      color: hsl(35, 77%, 62%);
+    }
+
+    .content{
+      display: grid;
+      grid-template-areas: 'Main Main Side'
+                           'Bottom Bottom Bottom' ;      
+
+      grid-template-columns: 35% 31% 57%;
+    }
+
+    .main{
+      grid-area: Main;
+      margin-left: -5%;
+
+    }
+
+    .main .hero{
+      background-image: url(assets/images/image-web-3-desktop.jpg);
+      width: 77%;
+      height: 77%;
+      margin-left: 15%;
+    }
+
+    .mainTitle{
+      display: grid;
+      grid-template-areas: 'Title Article';
+      grid-template-columns: 25% 70%;
+      margin-top: 3%;
+    }
+
+    .mainTitle .title{
+      grid-area: Title;
+      width: 91%;
+      margin-left: 61%;
+      
+    }
+
+    .mainTitle .title h1{
+      font-size: 200%;
+    }
+
+    .mainTitle .article{
+      grid-area: Article;
+      margin-left: 31%;     
+    }
+
+    .mainTitle .article p{
+      width: 93%;
+      text-align: justify;
+      margin-bottom: 3%;
+    }
+
+    .mainTitle .article button{
+      background-color: hsl(5, 85%, 63%);
+      padding: 3%;
+      border: 1px solid hsl(5, 85%, 63%);
+      color: white;
+    }
+
+    .mainTitle .article button:hover{
+      cursor: pointer;
+    }
+
+    .main img{
+      width: 81%;
+      height: 70%;
+      padding-left: 15%;
+    }
+
+    .side {
+      grid-area: Side;
+      background-color: hsl(240, 100%, 5%);
+      width: 50%;
+    }
+
+    .sideContent{
+      display: flex;
+      flex-direction: column;
+      padding: 9%;
+
+    }
+
+    .sideContent h1{
+      color: hsl(35, 77%, 62%);
+      margin-bottom: 3%;
+    }
+
+    .sideContent h2{
+      color: hsl(36, 100%, 99%);
+      margin-bottom: 3%;
+      margin-top: 11%;
+      font-size: 100%;
+    }
+
+    .sideContent p{
+      color: hsl(233, 8%, 79%);
+      margin-bottom: 9%;
+      font-size: 85%;
+    }
+
+    .line{
+      border-bottom: 1px solid hsl(219, 9%, 45%);
+      width: 95%;
+    }
+
+    .bottom{
+      margin-top: 9.5%;
+      margin-left: 5.5%;
+      grid-area: Bottom;
+      display: grid;
+      grid-template-columns: 27% 27% 30%;
+      grid-template-areas: 'Bottom1 Bottom2 Bottom3';
+      grid-gap: 7%;
+      width: 75%;
+/*      margin-bottom: 5%;*/
+    }
+
+    .bottom .bottom1{
+      grid-area: Bottom1;
+      display: flex;
+    }
+
+    .headline{
+      display: flex;
+      flex-direction: column;
+      margin-left: 13%;
+    }
+
+    .headline p:nth-child(1){
+      font-size: 150%;
+      color: hsl(233, 8%, 79%);
+      margin-bottom: 7%;
+    }
+
+    .headline p:nth-child(2){
+      color: hsl(240, 100%, 5%);
+      font-weight: 700;
+      margin-bottom: 17%;
+      
+      width: 130%;
+    }
+
+    .headline p:nth-child(3){
+      font-size: 90%;
+      line-height: 155%;
+      width: 130%;
+    }
+
+    .bottom .bottom2{
+      grid-area: Bottom2;
+      display: flex;
+    }
+
+    .bottom .bottom3{
+      grid-area: Bottom3;
+      display: flex;
+    }
+
+    
+
+    @media only screen and (max-width:768px){
+/*       body::-webkit-scrollbar { width: 0 !important } */
+     
+        body{
+        position: relative; 
+/*        min-height: calc(100vh - 94px);*/
+      }
+
+
+
+
+
+      .container{
+        position: absolute;
+        margin: auto;
+/*        min-height: calc(450vh - 324px);*/
+        width: 100%;
+        height: 370vh;
+      }
+
+      .listmenu{
+        position: relative;
+      }
+
+
+      .listmenu ul{
+        position: absolute;
+        visibility: hidden;
+        display: block;
+        height: 370vh;
+        margin-top: -21%; 
+        background-color: white;
+       transform: translateX(195%); 
+      }
+
+      .closebtn{
+        position: absolute;
+        left: 55%;
+        top: 1%;
+      }
+
+      .listmenu ul.slide{
+        transform: translateX(-45%);
+        z-index: 1000;
+        width: 200%;
+      }
+
+      .listmenu ul li{
+        margin-top: 5%;   
+      }
+
+      .listmenu ul li:nth-child(2){
+        margin-top: 45%;
+      }
+
+      .listmenu ul li:nth-child(3),.listmenu ul li:nth-child(4),.listmenu ul li:nth-child(5),.listmenu ul li:nth-child(6){
+        margin-top: 11%;
+      }
+
+      .menu .iconmenu{
+        visibility: visible;
+        position: absolute;
+        left: 87%;
+        top: 35%;
+      }
+
+      .content{
+        position: relative;
+
+        display: grid;
+        grid-template-areas: 'Main'
+                             'Side'  
+                             'Bottom';
+        grid-template-columns: 100% 100% 100% 100%;
+        grid-gap: 15%;                     
+      }
+
+      .main{
+        grid-area: Main;
+        margin-left: -5%;
+        margin-bottom: 15%;
+      }
+
+      .main .hero{
+        background-image: url(assets/images/image-web-3-mobile.jpg);
+        width: 90%;
+        height: 85%;
+        margin-left: 7%;
+      }
+
+      .mainTitle{
+        display: grid;
+        grid-template-areas: 'Title'
+                             'Article'; 
+        grid-template-columns: 100% 100%;
+      }
+
+      .mainTitle .title{
+        grid-area: Title;
+        width: 65%;
+        margin-left: 7%;
+      }
+
+      .mainTitle .title h1{
+        font-size: 290%;
+
+      }
+
+      .mainTitle .article{
+        grid-area: Article;
+        margin-top: 3%;
+        margin-left: 7%;
+        font-size: 110%;
+        width: 91%;
+        text-align: justify;  
+      }
+
+      .mainTitle .article p{
+        
+        margin-bottom: 3%;
+      }
+
+      .mainTitle .article button{
+        background-color: hsl(5, 85%, 63%);
+        padding: 5%;
+        border: 1px solid hsl(5, 85%, 63%);
+        color: white;
+        width: 50%;
+        margin-top: 5%;
+
+      }
+
+      .side {
+        grid-area: Side;
+        background-color: hsl(240, 100%, 5%);
+        width: 95%;
+        margin-left: 2%;
+        margin-top: 35%;
+
+      }
+
+      .bottom{
+        position: absolute;
+        margin-top: -25.5%;
+        margin-left: 5.5%;
+        grid-area: Bottom;
+        display: grid;
+        grid-template-columns: 100% 100% 100%;
+        grid-template-areas: 'Bottom1' 
+                              'Bottom2' 
+                              'Bottom3';
+/*        grid-gap: 7%;*/
+        width: 85%;
+        
+       
+      }
+
+      .headline{
+        display: flex;
+        flex-direction: column;
+        margin-left: 13%;
+      }
+
+      .headline p:nth-child(1){
+        font-size: 150%;
+        color: hsl(233, 8%, 79%);
+        margin-bottom: 7%;
+
+      }
+
+      .headline p:nth-child(2){
+        color: hsl(240, 100%, 5%);
+        font-weight: 700;
+        margin-bottom: 7%;
+      }
+
+      .headline p:nth-child(3){
+        font-size: 90%;
+        line-height: 155%;
+        width: 75%;
+      }
+
+        body .box{
+          position: absolute;
+          z-index: 1000;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          width: 50%;
+          margin-left: 50%;
+          height: 370vh;
+          background-color: black;
+          opacity: 75%;
+          visibility : visible;
+          transform: translateX(-211%);
+        }
+
+        body .box.slide1{
+          transform: translateX(-100%); 
+        }
+    }
+
+    @media only screen and (max-width:375px){
+      
+      body{
+        position: relative;
+      }
+
+      .container{
+        position: absolute;
+        background-color: hsl(36, 100%, 99%);
+        margin: auto;
+        height: 395vh;
+        width: 100%;
+      }
+
+      .listmenu{
+        position: relative;
+      }
+
+      .listmenu ul{
+        position: absolute;
+        visibility: hidden;
+        display: block;
+        height: 395vh;
+        margin-top: -21%; 
+        background-color: white;
+       transform: translateX(195%); 
+      }
+
+      .closebtn{
+        position: absolute;
+        left: 55%;
+        top: 1%;
+      }
+
+      .listmenu ul.slide{
+        transform: translateX(-45%);
+        z-index: 1000;
+        width: 200%;
+      }
+
+      .listmenu ul li{
+        margin-top: 5%;   
+      }
+
+      .listmenu ul li:nth-child(2){
+        margin-top: 45%;
+      }
+
+      .listmenu ul li:nth-child(3),.listmenu ul li:nth-child(4),.listmenu ul li:nth-child(5),.listmenu ul li:nth-child(6){
+        margin-top: 11%;
+      }
+
+      .menu .iconmenu{
+        visibility: visible;
+        position: absolute;
+        left: 87%;
+        top: 35%;
+      }
+
+      .content{
+        position: relative;
+        display: grid;
+        grid-template-areas: 'Main'
+                             'Side'  
+                             'Bottom';
+        grid-template-columns: 100% 100% 100% 100%;
+        grid-gap: 15%;                     
+      }
+
+      .main{
+        grid-area: Main;
+        margin-left: -5%;
+      }
+
+      .main .hero{
+        background-image: url(assets/images/image-web-3-mobile.jpg);
+        width: 90%;
+        height: 85%;
+        margin-left: 7%;
+      }
+
+      .mainTitle{
+        display: grid;
+        grid-template-areas: 'Title'
+                             'Article'; 
+        grid-template-columns: 100% 100%;
+      }
+
+      .mainTitle .title{
+        grid-area: Title;
+        width: 65%;
+        margin-left: 7%;
+      }
+
+      .mainTitle .title h1{
+        font-size: 200%;
+      }
+
+      .mainTitle .article{
+        grid-area: Article;
+        margin-top: 3%;
+        margin-left: 7%;  
+      }
+
+      .mainTitle .article p{
+        width: 95%;
+        text-align: justify;
+        margin-bottom: 3%;
+      }
+
+      .mainTitle .article button{
+        background-color: hsl(5, 85%, 63%);
+        padding: 5%;
+        border: 1px solid hsl(5, 85%, 63%);
+        color: white;
+        width: 50%;
+        margin-top: 5%;
+      }
+
+      .side {
+        grid-area: Side;
+        background-color: hsl(240, 100%, 5%);
+        width: 95%;
+        margin-left: 2%;
+        margin-top: 35%;
+      }
+
+      .bottom{
+        position: absolute;
+        margin-top: -11.5%;
+        margin-left: 5.5%;
+        grid-area: Bottom;
+        display: grid;
+        grid-template-columns: 100% 100% 100%;
+        grid-template-areas: 'Bottom1' 
+                              'Bottom2' 
+                              'Bottom3';
+        grid-gap: 7%;
+        width: 85%;
+        margin-bottom: 5%;
+      }
+
+      .headline{
+        display: flex;
+        flex-direction: column;
+        margin-left: 13%;
+      }
+
+      .headline p:nth-child(1){
+        font-size: 150%;
+        color: hsl(233, 8%, 79%);
+        margin-bottom: 7%;
+      }
+
+      .headline p:nth-child(2){
+        color: hsl(240, 100%, 5%);
+        font-weight: 700;
+        margin-bottom: 7%;
+      }
+
+      .headline p:nth-child(3){
+        font-size: 90%;
+        line-height: 155%;
+      }
+
+        body .box{
+          position: absolute;
+          z-index: 1000;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          width: 50%;
+          margin-left: 50%;
+          height: 395vh;
+          background-color: black;
+          opacity: 75%;
+          visibility : visible;
+          transform: translateX(-211%);
+        }
+
+        body .box.slide1{
+          transform: translateX(-100%); 
+        }
+
+    }
