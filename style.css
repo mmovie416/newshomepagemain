@@ -287,9 +287,14 @@
       .menu .iconmenu{
         visibility: visible;
         position: absolute;
-        left: 87%;
+        left: 89%;
         top: 35%;
       }
+       
+        .menu .iconmenu:hover{
+        cursor: pointer;
+       }
+     
 
       .content{
         position: relative;
